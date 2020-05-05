@@ -1,0 +1,30 @@
+.error {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	max-width: 200px;
+	text-align: center;
+}
+
+.error img {
+	height: 30px;
+	width: 30px;
+	flex: 0 0 auto;
+}
+
+.error h3 {
+	margin-top: 8px;
+	font-size: 1.4rem;
+}
+
+.error p {
+	margin-top: 6px;
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}
+
+.error button {
+	margin-top: 12px;
+}

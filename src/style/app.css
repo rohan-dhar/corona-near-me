@@ -1,0 +1,147 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	background-color: transparent;
+	box-sizing: border-box;
+	font-family: nunito;
+	color: var(--white);
+}
+
+:root {
+	font-size: 10pt;
+	--blue: #5590ff;
+	--red: #ff4160;
+	--green: #2ecc91;
+	--white: #fff;
+	--light-grey: #fafafa;
+	--grey: #f3f3f3;
+	--dark: #23222d;
+	--dark-light: #334;
+
+	--mob-col-width: 310px;
+}
+
+body {
+	background: var(--dark);
+}
+
+input,
+a,
+button,
+textarea {
+	outline: none;
+}
+
+a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	transition: color 0.2s cubic-bezier(0.58, 0.06, 0.32, 1.29);
+	padding: 6px;
+	border-radius: 5px;
+}
+
+a::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 0;
+	left: 0px;
+	top: 0px;
+	background-color: var(--blue);
+	color: #fff;
+	transition: width 0.2s cubic-bezier(0.58, 0.06, 0.32, 1.29);
+	z-index: -1;
+}
+
+a:hover {
+	color: #fff !important;
+}
+
+a:hover::after {
+	width: 100%;
+}
+
+.btn {
+	position: relative;
+	overflow: hidden;
+	height: 42px;
+	min-width: 120px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 3px solid var(--blue);
+
+	color: var(--blue);
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: all 0.2s cubic-bezier(0.58, 0.06, 0.32, 1.29);
+	cursor: pointer;
+	z-index: 1;
+}
+
+.btn-light {
+	border-color: #fff;
+	color: #fff;
+}
+
+.btn::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	background-color: var(--blue);
+	top: 50%;
+	height: 0%;
+	width: 0;
+	left: 0;
+	transform: translateY(-50%) rotate(90deg);
+	transition: all 0.3s cubic-bezier(0.58, 0.06, 0.32, 1.6);
+}
+
+.btn-light::before {
+	background-color: #fff;
+}
+
+.btn:enabled:hover {
+	color: var(--white);
+	border-width: 0px;
+}
+
+.btn-light:enabled:hover {
+	color: #333;
+}
+
+.btn:hover:enabled::before {
+	width: 105%;
+	height: 105%;
+	transform: translateY(-50%) rotate(0deg);
+}
+
+.inp {
+	position: relative;
+	height: 44px;
+	min-width: 280px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: none;
+	border-radius: 6px;
+	background-color: var(--dark);
+	color: var(--dark-text);
+	font-weight: 400;
+	font-size: 10.5pt;
+	transition: all 0.3s cubic-bezier(0.58, 0.06, 0.32, 1.29);
+	border: 2px solid transparent;
+}
+
+.inp:hover,
+.inp:focus {
+	border: 2px solid var(--blue);
+}
+
+.inp[disabled] {
+	background-color: var(--light-grey);
+}
+
+.btn:disabled {
+	opacity: 0.7;
+}

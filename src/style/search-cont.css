@@ -1,0 +1,44 @@
+.search-cont * {
+	font-family: lato;
+}
+.search-cont {
+	display: flex;
+	width: 95vw;
+	padding: 28px;
+	flex-direction: row;
+	align-items: center;
+	background-color: var(--dark-light);
+	border-radius: 8px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.search-cont-inp {
+	display: flex;
+	width: 470px;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.search-cont-inp h1 {
+	font-size: 2.3rem;
+}
+
+.search-cont-inp h3 {
+	font-weight: 300;
+	margin-top: 5px;
+	font-size: 1.6rem;
+}
+
+.search-cont-inp .inp {
+	margin-top: 30px;
+	width: 90%;
+	max-width: 400px;
+}
+
+@media screen and (max-width: 900px) {
+	.search-cont .error {
+		width: 100%;
+	}
+}

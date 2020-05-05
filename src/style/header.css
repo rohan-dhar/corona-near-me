@@ -1,0 +1,84 @@
+header {
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	align-items: center;
+	width: 100vw;
+	flex: 0 0 auto;
+}
+
+.header-logo {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin-left: 30px;
+	text-transform: uppercase;
+}
+
+.header-logo > img {
+	height: 42px;
+}
+
+.header-logo > h3 {
+	font-size: 1.2rem;
+	font-weight: 300;
+	margin-left: 15px;
+	letter-spacing: 1px;
+}
+.header-logo > h3 > span {
+	font-weight: 700;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.header-credits {
+	margin-right: 30px;
+	font-weight: 300;
+	text-align: right;
+}
+
+header a::after {
+	all: initial !important;
+}
+
+header a {
+	padding: 0px;
+}
+
+header a:hover {
+	color: var(--blue) !important;
+}
+
+@media screen and (max-width: 900px) {
+	header {
+		height: 120px;
+		padding-top: 10px;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+	}
+	.header-logo {
+		flex-wrap: wrap;
+		width: 100%;
+		height: initial;
+		margin: 0px;
+		margin: 20px 0 10px 0;
+	}
+	.header-logo h3 {
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+	}
+	.header-logo img {
+		margin-top: 20px;
+		height: 50px;
+		width: 50px;
+	}
+	.header-credits {
+		text-align: center;
+		margin: 0px;
+	}
+}
