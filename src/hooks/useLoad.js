@@ -1,9 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import { DISTRICT_URL, STATE_URL } from "../conf";
 
 export default (type) => {
-	let url = type === "district" ? DISTRICT_URL : STATE_URL;
+	let url = type === "district" ? process.env.REACT_APP_DISTRICT_URL : process.env.REACT_APP_STATE_URL;
 
 	const [loading, setLoading] = useState(true);
 	const [resp, setResp] = useState(null);

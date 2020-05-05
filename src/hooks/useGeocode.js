@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { GEOCODE_URL as url, GEOCODE_KEY as key } from "../conf.js";
 import axios from "axios";
 
 export default function useGeocode() {
@@ -15,9 +14,9 @@ export default function useGeocode() {
 		setError(false);
 		setRes(null);
 		axios
-			.get(url, {
+			.get(process.env.REACT_APP_GEOCODE_URL, {
 				params: {
-					key,
+					key: process.env.REACT_APP_GEOCODE_KEY,
 					latlng: `${lat}, ${lng}`,
 				},
 			})
