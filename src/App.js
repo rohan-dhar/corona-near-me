@@ -32,8 +32,8 @@ function App() {
 					<allDistrictContext.Provider value={[districtData, setDistrictData]}>
 						<Header />
 						<AnimatePresence>
-							<DataCont />
-							<SearchCont />
+							<DataCont key="data-cont" />
+							<SearchCont key="search-cont" />
 						</AnimatePresence>
 						<Footer />
 					</allDistrictContext.Provider>

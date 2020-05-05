@@ -56,7 +56,7 @@ export default function StateeStatsCont({ type }) {
 		);
 	}
 	if (!stateData) {
-		return <div className="data-cont-stat-none"> No data found for your state. </div>;
+		return <Error text="No data found for your state." />;
 	}
 
 	return <StateStatsView state={state} stateData={stateData} />;

@@ -45,7 +45,7 @@ export default function DistrictStatsCont({ position }) {
 	}
 
 	if (!district) {
-		return <div className="data-cont-stat-none"> No data found for your district.</div>;
+		return <Error text="No data found for your district." />;
 	}
 
 	if (!distData) {

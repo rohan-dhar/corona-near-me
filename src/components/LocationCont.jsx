@@ -20,8 +20,6 @@ function LocationCont({ geoData, type, position }) {
 			return [];
 		}
 
-		console.log(res);
-
 		const components = [];
 		for (let i = 0; i < res.length; i++) {
 			const address = res[i].address_components;

@@ -8,12 +8,17 @@ export default function Footer() {
 			<h3>Stay Home, Stay Safe.</h3>
 			<div className="footer-links">
 				<h4>Important Links</h4>
-				<a href="https://www.mohfw.gov.in/">India Ministry of Health and Family Welfare</a> <br />
-				<a href="https://www.who.int/health-topics/coronavirus">World Health Organization - Corona Virus</a>
+				<a href="https://www.mohfw.gov.in/" target="_blank" rel="noopener noreferrer">
+					India Ministry of Health and Family Welfare
+				</a>{" "}
+				<br />
+				<a href="https://www.who.int/health-topics/coronavirus" target="_blank" rel="noopener noreferrer">
+					World Health Organization - Corona Virus
+				</a>
 			</div>
 
 			<p className="footer-github">
-				<a href="https://github.com" target="_blank" rel="noopener noreferrer">
+				<a href="https://github.com/rohan-dhar/corona-near-me" target="_blank" rel="noopener noreferrer">
 					Feel free to collaborate on Github
 					<img src={github} alt="Github Logo" />
 				</a>

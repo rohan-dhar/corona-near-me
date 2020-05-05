@@ -5,7 +5,6 @@ import animStyles from "./animStyles";
 import Counts from "./Counts";
 
 export default function DistrictStatsView({ district: { dist: district, position } }) {
-	console.log(district);
 	return (
 		<>
 			<motion.section

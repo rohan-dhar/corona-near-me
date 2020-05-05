@@ -12,7 +12,7 @@
 	min-width: var(--mob-col-width);
 	min-height: 300px;
 	justify-content: space-evenly;
-	align-items: flex-start;
+	align-items: center;
 	margin-top: 20px;
 	padding-bottom: 30px;
 }

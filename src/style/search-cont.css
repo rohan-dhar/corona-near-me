@@ -13,6 +13,10 @@
 	flex-wrap: wrap;
 }
 
+.search-cont .error {
+	margin: initial;
+}
+
 .search-cont-inp {
 	display: flex;
 	width: 470px;

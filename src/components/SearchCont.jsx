@@ -8,7 +8,7 @@ import Error from "./Error";
 import "../style/search-cont.css";
 
 export default function SearchCont() {
-	const bufferTime = 200;
+	const bufferTime = 300;
 
 	const [states] = useContext(allStateContext);
 	const [districts] = useContext(allDistrictContext);
@@ -41,7 +41,6 @@ export default function SearchCont() {
 		const lastStates = states.resp.data.slice(-1)[0].regional;
 		for (const state of lastStates) {
 			if (state.loc.replace(/\s/g, "").toUpperCase().substring(0, s.length) === s) {
-				console.log(state);
 				setSelectedItem({
 					name: state.loc,
 					death: state.deaths,
@@ -82,7 +81,7 @@ export default function SearchCont() {
 			<div className="search-cont-inp">
 				<motion.h1 variants={animStyles.children}>Search for a Location</motion.h1>
 				<motion.h3 variants={animStyles.children}>
-					Start typing below to see statistics for any region.
+					Start typing below to see statistics for any region in India.
 				</motion.h3>
 				<input
 					type="text"
