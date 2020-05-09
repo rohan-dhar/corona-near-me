@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import animStyles from "./animStyles";
 import { allStateContext, allDistrictContext } from "../App";
@@ -16,6 +16,8 @@ export default function SearchCont() {
 	const [searchText, setSearchText] = useState("");
 	const [timeoutId, setTimeoutId] = useState(null);
 	const [selectedItem, setSelectedItem] = useState(null);
+
+	const inpRef = useRef(null);
 
 	function search(s) {
 		s = s.replace(/\s/g, "").toUpperCase();
@@ -66,6 +68,12 @@ export default function SearchCont() {
 		);
 	}
 
+	function handleFocus() {
+		if (inpRef.current) {
+			inpRef.current.select();
+		}
+	}
+
 	if (!states.resp || !districts.resp) {
 		return null;
 	}
@@ -88,6 +96,8 @@ export default function SearchCont() {
 					className="inp"
 					value={searchText}
 					onChange={handleChange}
+					onFocus={handleFocus}
+					ref={inpRef}
 					placeholder="Type here..."
 				/>
 			</div>
